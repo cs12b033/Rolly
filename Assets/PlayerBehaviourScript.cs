@@ -30,6 +30,10 @@ public class PlayerBehaviourScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        // if (transform.postion.y < 1) 
+        // {
+        //     Application.Quit();
+        // }
         if (Input.GetKey("a"))
         {
             rb.AddForce(-sidewaysForce, 0, forwardFoce);
@@ -41,5 +45,10 @@ public class PlayerBehaviourScript : MonoBehaviour
         else {
             rb.AddForce(0, 0, forwardFoce);
         }
+    }
+
+    void Stop()
+    {
+        Debug.Log("Stopped");
     }
 }
